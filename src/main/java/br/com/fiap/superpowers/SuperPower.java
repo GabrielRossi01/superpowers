@@ -1,18 +1,22 @@
 package br.com.fiap.superpowers;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import lombok.Getter;
+import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
-@Getter
+@Table(name = "superpoder")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class SuperPower {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String name;
-    private String description;
-    private int utilityLevel;
+    private String nome;
+    private String descricao;
+
+    @Column(name = "nivel_inutilidade ")
+    private int nivelInutilidade;
 }
