@@ -17,6 +17,6 @@ public class SuperPower {
     private String nome;
     private String descricao;
 
-    @Column(name = "nivel_inutilidade ")
+    @Column(name = "nivel_inutilidade")
     private int nivelInutilidade;
 }
